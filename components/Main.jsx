@@ -6,8 +6,8 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Main = () => {
   return (
-    <div className="w-full h-screen text-center">
-      <div className="max-w-[1248px] w-full h-full p-2 flex justify-center items-center ">
+    <section className="w-full h-screen text-center">
+      <div className="max-w-[1248px] w-full h-full p-2 mx-auto flex justify-center items-center ">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-600 ">
             let's build something together
@@ -38,7 +38,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

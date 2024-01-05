@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full h-20 shadow-xl z-[100]">
+    <nav className="fixed w-full h-20 shadow-xl z-[100] bg-slate-50">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <h1 className="text-indigo-400">A.A</h1>
 
