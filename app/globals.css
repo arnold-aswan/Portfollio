@@ -32,4 +32,20 @@
   button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#789dff] text-white;
   }
+
+  .nav__links {
+    @apply ml-10 text-sm uppercase hover:border-b
+  }
+
+  .nav__links__mobile {
+    @apply py-4 text-sm;
+  }
+
+  .nav__icons__mobile {
+    @apply rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300;
+  }
+
+  .main__social__icons {
+    @apply rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300
+  }
 }

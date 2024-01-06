@@ -21,18 +21,16 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex">
             <Link href={"/"}>
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
+              <li className="nav__links">Home</li>
             </Link>
             <Link href={"/"}>
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
+              <li className="nav__links">About</li>
             </Link>
             <Link href={"/"}>
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+              <li className="nav__links">Skills</li>
             </Link>
             <Link href={"/"}>
-              <li className="ml-10 text-sm uppercase hover:border-b">
-                Contact
-              </li>
+              <li className="nav__links">Contact</li>
             </Link>
           </ul>
 
@@ -65,46 +63,46 @@ const Navbar = () => {
 
           <div className="border-b border-gray-300 my-4 ">
             <p className="w-[85%] md:w-[90%] py-4 ">
-              Let's build something legendary together
+              Let&#39;s build something legendary together
             </p>
           </div>
 
           <div className="py-4 flex flex-col ">
             <ul className="uppercase ">
               <Link href={"/"}>
-                <li className="py-4 text-sm ">Home</li>
+                <li className="nav__links__mobile ">Home</li>
               </Link>
               <Link href={"/"}>
-                <li className="py-4 text-sm ">About</li>
+                <li className="nav__links__mobile ">About</li>
               </Link>
               <Link href={"/"}>
-                <li className="py-4 text-sm ">Skills</li>
+                <li className="nav__links__mobile ">Skills</li>
               </Link>
               <Link href={"/"}>
-                <li className="py-4 text-sm ">Projects</li>
+                <li className="nav__links__mobile ">Projects</li>
               </Link>
               <Link href={"/"}>
-                <li className="py-4 text-sm ">Contact</li>
+                <li className="nav__links__mobile ">Contact</li>
               </Link>
             </ul>
 
             <div className="pt-40 ">
               <p className="uppercase tracking-widest text-[#5651e5] ">
-                Let's connect
+                Let&#39;s connect
               </p>
               <div
                 className="flex items-center justify-between my-4 sm:w-[80
                 %]">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                <div className="nav__icons__mobile">
                   <FaLinkedinIn />
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                <div className="nav__icons__mobile">
                   <FaGithub />
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                <div className="nav__icons__mobile">
                   <AiOutlineMail />
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                <div className="nav__icons__mobile">
                   <BsFillPersonLinesFill />
                 </div>
               </div>
