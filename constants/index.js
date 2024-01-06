@@ -37,4 +37,23 @@ const skillStacks = [
   },
 ];
 
+export const projects = [
+  {
+    name: "car hub",
+    imageUrl: "/assets/projects/carhub.png",
+  },
+  {
+    name: "travel app landing page",
+    imageUrl: "/assets/projects/hillink-travel.png",
+  },
+  {
+    name: "project manager",
+    imageUrl: "/assets/projects/projectMgr.png",
+  },
+  // {
+  //   name: "project manager2",
+  //   imageUrl: "/assets/projects/project-mgr.png",
+  // },
+];
+
 export default skillStacks;
