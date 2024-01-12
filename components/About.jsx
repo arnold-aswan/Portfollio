@@ -2,10 +2,12 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="w-full md:h-screen p-2 flex items-center py-16 ">
+    <section
+      id="about"
+      className="w-full md:h-screen p-2 flex items-center py-16 ">
       <article className="max-w-[1248px] m-auto md:grid grid-cols-3 gap-8 ">
         <div className="col-span-2 ">
-          <p className="uppercase text-xl tracking-widest text-[#5651e5] ">
+          <p className="uppercase text-xl tracking-widest text-purple ">
             About
           </p>
           <h2 className="py-4 tracking-widest">Who i am</h2>
