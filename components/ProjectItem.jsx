@@ -1,27 +1,30 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import autoprefixer from "autoprefixer";
 
 const ProjectItem = ({ projects }) => {
-  const { name, imageUrl } = projects;
+  const { name, imageUrl, demoUrl } = projects;
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:cursor-pointer hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] ">
+    <div className="relative flex items-center justify-center h-auto w-[350px] lg:w-[400px] shadow-xl shadow-gray-400 rounded-xl p-2  group hover:cursor-pointer hover:bg-gradient-to-r from-purple to-[#709dff] ">
       <Image
         className="rounded-xl group-hover:opacity-10 w-full"
         src={imageUrl}
         alt="project-thumbnail"
-        width={350}
-        height={150}
+        objectFit="cover"
+        width={700}
+        height={700}
       />
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
-        <h3 className="text-2xl pb-3 text-white tracking-wider text-center capitalize">
+      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center ">
+        <h3 className="text-lg pb-3 text-white tracking-wider text-center capitalize">
           {name}
         </h3>
-        <Link href="/">
-          <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
-            More Info
-          </p>
-        </Link>
+
+        <a
+          href={demoUrl}
+          target="_blank"
+          className="text-center py-2 px-2 rounded-lg bg-white text-gray-700 font-bold text-md cursor-pointer">
+          Demo
+        </a>
       </div>
     </div>
   );
