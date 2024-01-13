@@ -2,36 +2,58 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
+import { navLinks } from "@/constants";
+import Socials from "./Socials";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
+
+  const classes = "nav__icons__mobile";
 
   const handleNav = () => {
     setNav(!nav);
   };
 
+  const handleShadow = () => {
+    if (window.scrollY >= 90) {
+      setShadow(true);
+    } else {
+      setShadow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleShadow);
+  }, []);
+
+  const navigation = navLinks.map((link, clas) => {
+    return (
+      <Link href={link.path} key={link.path}>
+        <li className="nav__links">{link.name}</li>
+      </Link>
+    );
+  });
+
   return (
-    <nav className="fixed w-full h-20 shadow-xl z-[100] bg-slate-50">
+    <nav
+      className={
+        shadow
+          ? "fixed w-full h-20 shadow-xl z-[100] bg-slate-50"
+          : "fixed w-full h-20 z-[100] bg-slate-50"
+      }>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <h1 className="text-indigo-400">A.A</h1>
+        <h1 className="text-purple">A.A</h1>
 
         <div>
           <ul className="hidden md:flex">
-            <Link href={"/"}>
-              <li className="nav__links">Home</li>
-            </Link>
-            <Link href={"/"}>
-              <li className="nav__links">About</li>
-            </Link>
-            <Link href={"/"}>
-              <li className="nav__links">Skills</li>
-            </Link>
-            <Link href={"/"}>
-              <li className="nav__links">Contact</li>
-            </Link>
+            {navLinks.map((link) => (
+              <Link href={link.path} key={link.path}>
+                <li className="nav__links">{link.name}</li>
+              </Link>
+            ))}
           </ul>
 
           <div className="md:hidden" onClick={handleNav}>
@@ -47,12 +69,12 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500 "
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] py-10 px-5 ease-in duration-500 "
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500 "
           }>
           <div className="flex w-full items-center justify-between">
             <div>
-              <h1 className="text-indigo-400">A.A</h1>
+              <h1 className="text-purple">A.A</h1>
             </div>
             <div
               onClick={handleNav}
@@ -69,42 +91,23 @@ const Navbar = () => {
 
           <div className="py-4 flex flex-col ">
             <ul className="uppercase ">
-              <Link href={"/"}>
-                <li className="nav__links__mobile ">Home</li>
-              </Link>
-              <Link href={"/"}>
-                <li className="nav__links__mobile ">About</li>
-              </Link>
-              <Link href={"/"}>
-                <li className="nav__links__mobile ">Skills</li>
-              </Link>
-              <Link href={"/"}>
-                <li className="nav__links__mobile ">Projects</li>
-              </Link>
-              <Link href={"/"}>
-                <li className="nav__links__mobile ">Contact</li>
-              </Link>
+              {navLinks.map((link) => (
+                <Link href={link.path} key={link.path}>
+                  <li onClick={handleNav} className="nav__links__mobile ">
+                    {link.name}
+                  </li>
+                </Link>
+              ))}
             </ul>
 
             <div className="pt-40 ">
-              <p className="uppercase tracking-widest text-[#5651e5] ">
+              <p className="uppercase tracking-widest text-purple ">
                 Let&#39;s connect
               </p>
               <div
-                className="flex items-center justify-between my-4 sm:w-[80
+                className="flex items-center justify-between gap-4 my-4 sm:w-[80
                 %]">
-                <div className="nav__icons__mobile">
-                  <FaLinkedinIn />
-                </div>
-                <div className="nav__icons__mobile">
-                  <FaGithub />
-                </div>
-                <div className="nav__icons__mobile">
-                  <AiOutlineMail />
-                </div>
-                <div className="nav__icons__mobile">
-                  <BsFillPersonLinesFill />
-                </div>
+                <Socials className={classes} />
               </div>
             </div>
           </div>
