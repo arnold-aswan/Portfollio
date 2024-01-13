@@ -52,7 +52,7 @@ html {
   }
 
   .main__social__icons {
-    @apply rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-110 ease-in duration-300;
+    @apply rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-110 ease-in duration-300 text-purple;
   }
 
   .icons {
