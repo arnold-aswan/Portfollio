@@ -41,19 +41,44 @@ export const projects = [
   {
     name: "car hub",
     imageUrl: "/assets/projects/carhub.png",
+    gitUrl: "https://github.com/arnold-aswan/car-showcase",
+    demoUrl: "https://car-showcase-theta-seven.vercel.app/",
   },
   {
     name: "travel app landing page",
     imageUrl: "/assets/projects/hillink-travel.png",
+    gitUrl: "https://github.com/arnold-aswan/travel-ui-ux",
+    demoUrl: "https://travel-ui-ux-olive.vercel.app/",
   },
   {
     name: "project manager",
     imageUrl: "/assets/projects/projectMgr.png",
+    gitUrl: "https://github.com/arnold-aswan/project-tracker-frontend",
+    demoUrl: "https://project-tracker-frontend-six.vercel.app/",
   },
-  // {
-  //   name: "project manager2",
-  //   imageUrl: "/assets/projects/project-mgr.png",
-  // },
+];
+
+export const navLinks = [
+  {
+    path: "/#main",
+    name: "Home",
+  },
+  {
+    path: "/#about",
+    name: "About",
+  },
+  {
+    path: "/#skills",
+    name: "Skills",
+  },
+  {
+    path: "/#projects",
+    name: "Projects",
+  },
+  {
+    path: "/#contacts",
+    name: "Contacts",
+  },
 ];
 
 export default skillStacks;
