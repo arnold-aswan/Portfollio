@@ -56,6 +56,13 @@ export const projects = [
     gitUrl: "https://github.com/arnold-aswan/project-tracker-frontend",
     demoUrl: "https://project-tracker-frontend-six.vercel.app/",
   },
+  {
+    name: "netflix clone",
+    imageUrl: "/assets/projects/netflix.png",
+    gitUrl: "https://github.com/arnold-aswan/netflix_clone",
+    demoUrl: "https://netflix-clone-azure-mu.vercel.app/",
+  },
+
 ];
 
 export const navLinks = [
