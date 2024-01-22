@@ -58,4 +58,8 @@ html {
   .icons {
     @apply md:w-[2rem] md:h-[2rem] w-[1.5rem] h-[1.5rem];
   }
+
+  .project__item__link {
+    @apply text-center p-2 rounded-lg bg-white text-gray-700 font-bold cursor-pointer;
+  }
 }
