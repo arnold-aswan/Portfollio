@@ -3,7 +3,7 @@ import Image from "next/image";
 import autoprefixer from "autoprefixer";
 
 const ProjectItem = ({ projects }) => {
-  const { name, imageUrl, demoUrl } = projects;
+  const { name, imageUrl, demoUrl, gitUrl } = projects;
   return (
     <div className="relative flex items-center justify-center h-auto w-[350px] lg:w-[400px] shadow-xl shadow-gray-400 rounded-xl p-2  group hover:cursor-pointer hover:bg-gradient-to-r from-purple to-[#709dff] ">
       <Image
@@ -19,12 +19,15 @@ const ProjectItem = ({ projects }) => {
           {name}
         </h3>
 
-        <a
-          href={demoUrl}
-          target="_blank"
-          className="text-center py-2 px-2 rounded-lg bg-white text-gray-700 font-bold text-md cursor-pointer">
-          Demo
-        </a>
+        <div className="flex gap-2 items-center justify-center">
+          <a href={demoUrl} target="_blank" className="project__item__link">
+            Demo
+          </a>
+
+          <a href={gitUrl} target="_blank" className="project__item__link ">
+            Code
+          </a>
+        </div>
       </div>
     </div>
   );
